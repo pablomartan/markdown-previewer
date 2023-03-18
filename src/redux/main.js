@@ -9,6 +9,8 @@ const defaultState = {
 
 // TODO: async function to parse md text in input
 
+// TODO: function for updating input
+
 // TODO: create reducer for actions
 
 const middleWarePlaceHolder = applyMiddleware(thunk);
