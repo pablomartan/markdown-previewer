@@ -5,10 +5,8 @@
  *  - render parsed input
 */
 
-// Declare actions
-const USER_INPUT = 'USER_INPUT';
-const PARSE = 'PARSE';
-const RENDER = 'RENDER';
+// Import actions types
+import * as Types from './actionTypes.js';
 
 /**
  * @description: creates an action for user input and returns the text the user
@@ -19,7 +17,7 @@ const RENDER = 'RENDER';
 export const inputChange = e => {
   const value = e.target.value;
   return {
-    'type': USER_INPUT,
+    'type': Types.USER_INPUT,
     'input': value
   }
 };
