@@ -1,7 +1,8 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import { inputChange } from './actionCreators.js';
 import * as Types from './actionTypes.js';
+import * as Reducers from './reducers.js';
 
 const defaultState = {
   'input': ''
@@ -15,11 +16,15 @@ const defaultState = {
 
 const middleWarePlaceHolder = applyMiddleware(thunk);
 
-const reducer = (state = defaultState, action) => {
-  return action.type === Types.USER_INPUT ? action.input : state;
-};
+const rootReducer = combineReducers(
+  {
+    inputChange: Reducers.inputReducer,
+    inputParse: Reducers.parseReducer,
+    inputRender: Reducers.renderReducer
+  }
+);
 
-export const store = createStore(reducer, middleWarePlaceHolder);
+export const store = createStore(rootReducer, middleWarePlaceHolder);
 
 export const mapDispatchToProps = dispatch => {
   return {
