@@ -16,8 +16,11 @@ import * as Types from './actionTypes.js';
  */
 export const inputChange = e => {
   const value = e.target.value;
+  const parsed = marked.parse(value);
+
   return {
     'type': Types.USER_INPUT,
-    'input': value
+    'input': value,
+    'parsed': parsed
   }
 };
