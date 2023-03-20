@@ -6,7 +6,7 @@ export class Preview extends React.Component {
   }
   render() {
     return(
-      <div id={this.props.id} className="col-10 border h-75 overflow-auto" dangerouslySetInnerHTML={{__html: this.props.text}} />
+      <div id={this.props.id} className="col-9 border overflow-auto" dangerouslySetInnerHTML={{__html: this.props.text}} />
     )
   }
 }
