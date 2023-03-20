@@ -10,8 +10,8 @@ export class App extends React.Component {
   render() {
     return(
       <div id="app">
-        <Editor id="editor" onChange={this.props.inputHandler}/>
-        <Preview id="preview" />
+        <Editor id="editor" input={this.props.input} handler={this.props.inputHandler}/>
+        <Preview id="preview" text={this.props.parsed} />
       </div>
     )
   }
