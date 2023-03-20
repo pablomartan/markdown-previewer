@@ -8,7 +8,7 @@ const defInput = sampleMd.join('');
 
 const defaultState = {
   'input': defInput,
-  'parsed': marked.parse(defInput) 
+  'parsed': marked.parse(defInput, { breaks: true }) 
 };
 
 const middleWarePlaceHolder = applyMiddleware(thunk);
