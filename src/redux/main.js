@@ -2,10 +2,13 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { inputChange } from './actionCreators.js';
 import * as Types from './actionTypes.js';
+import { sampleMd } from './sampleMd.js';
+
+const defInput = sampleMd.join('');
 
 const defaultState = {
-  'input': '',
-  'parsed': ''
+  'input': defInput,
+  'parsed': marked.parse(defInput) 
 };
 
 const middleWarePlaceHolder = applyMiddleware(thunk);
