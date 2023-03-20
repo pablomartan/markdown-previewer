@@ -10,9 +10,8 @@ const crossed = 'This is some ~~crossed~~ text\n';
 const link = `There's also [links](https://www.freecodecamp.org), and
 > Block Quotes!\n`;
 const table = `And if you want to get really crazy, even tables:
-
 Wild Header | Crazy Header | Another Header?
------------- | ------------- | -------------
+:--: | :--: | :--:
 Your content can | be here, and it | can be here....
 And here. | Okay. | I think we get it.
 `;
