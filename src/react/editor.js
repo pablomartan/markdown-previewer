@@ -7,7 +7,7 @@ export class Editor extends React.Component {
 
   render() {
     return(
-        <textarea id={this.props.id} value={this.props.input} />
+        <textarea id={this.props.id} value={this.props.input} onChange={this.props.handler} />
     )
   }
 }
