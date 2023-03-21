@@ -1,14 +1,22 @@
 // Custom stylesheet
 //$sans: ;
-$antiflash-white: rgba(231, 236, 239, 1);
-$yinmn-blue: rgba(39, 76, 119, 1);
-$air-superiority-blue: rgba(96, 150, 186, 1);
-$uranian-blue: rgba(163, 206, 241, 1);
-$battleship-gray: rgba(139, 140, 137, 1);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+$text: #4c4f69;
+$base: #eff1f5;
+$crust: #dce0e8;
+$mauve: #8839ef;
+$yellow: #df8e1d;
+$teal: #179299;
+$sky: #04a5e5;
+
+body {
+    font-family: 'Open Sans';
+}
 
 #root {
     margin: 0;
-    background-color: ghostwhite; 
+    background-color: $crust; 
 }
 
 #app, #editor, #preview {
@@ -16,26 +24,51 @@ $battleship-gray: rgba(139, 140, 137, 1);
 }
 
 #editor, #preview {
-  background-color: $antiflash-white;
+  background-color: $base;
   padding: 8px;
 }
 
+h1 {
+    color: $mauve;
+}
+
+h2 {
+    color: $teal;
+}
+
+h3 {
+    color: $sky;
+}
+
 .toolbar {
-    background-color: $yinmn-blue;
-    color: #fff;
+    background-color: $teal;
+    color: white;
     height: 30px;
     width: 100%;
     padding: 4px;
+    font-weight: bold;
 }
 
 #preview > pre {
   background-color: white;
+  font: monospace;
   //padding: 5px !important;
 }
 
 #preview > table, th, td {
     padding: 8px;
     border: 1px solid black;
+}
+
+blockquote {
+    display: inline-block;
+    padding: 4px;
+    background-color: $crust;
+}
+
+th {
+    background-color: $yellow;
+    color: $base;
 }
 
 img {
