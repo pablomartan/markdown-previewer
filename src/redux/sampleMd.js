@@ -7,8 +7,8 @@ const it = 'This is some _italic_ text\n';
 const b = 'This is some **bold** text\n';
 const itB = 'This is some _**bold italics**_ text\n';
 const crossed = 'This is some ~~crossed~~ text\n';
-const link = `There's also [links](https://www.freecodecamp.org), and
-> Block Quotes!\n`;
+const link = `There's also [links](https://www.freecodecamp.org)\n`;
+const block = `> Block Quotes!\n`;
 const table = `\nAnd if you want to get really crazy, even tables:
 Wild Header | Crazy Header | Another Header?
 :--: | :--: | :--:
@@ -31,4 +31,4 @@ const oList = `
 const img = `
 \n![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)`;
 
-export const sampleMd = [h1, h2, h3, inlineCode, blockCode, it, b, itB, crossed, link, table, uList, oList, img];
+export const sampleMd = [h1, h2, h3, inlineCode, blockCode, it, b, itB, crossed, link, block, table, uList, oList, img];
