@@ -21,6 +21,7 @@ export const store = createStore(reducer, middleWarePlaceHolder);
 
 export const mapDispatchToProps = dispatch => {
   return {
+    // see docs for inputChange on ./actionCreators.js'
     inputHandler: e => {
       dispatch(inputChange(e));
     }
