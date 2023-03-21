@@ -1,0 +1,43 @@
+// Custom stylesheet
+//$sans: ;
+$antiflash-white: rgba(231, 236, 239, 1);
+$yinmn-blue: rgba(39, 76, 119, 1);
+$air-superiority-blue: rgba(96, 150, 186, 1);
+$uranian-blue: rgba(163, 206, 241, 1);
+$battleship-gray: rgba(139, 140, 137, 1);
+
+#root {
+    margin: 0;
+    background-color: ghostwhite; 
+}
+
+#app, #editor, #preview {
+    width: 100%;
+}
+
+#editor, #preview {
+  background-color: $antiflash-white;
+  padding: 8px;
+}
+
+.toolbar {
+    background-color: $yinmn-blue;
+    color: #fff;
+    height: 30px;
+    width: 100%;
+    padding: 4px;
+}
+
+#preview > pre {
+  background-color: white;
+  //padding: 5px !important;
+}
+
+#preview > table, th, td {
+    padding: 8px;
+    border: 1px solid black;
+}
+
+img {
+    max-width: 500px;
+}
