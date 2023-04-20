@@ -1,22 +1,26 @@
 // Custom stylesheet
-//$sans: ;
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-$text: #4c4f69;
-$base: #eff1f5;
-$crust: #dce0e8;
-$mauve: #8839ef;
-$yellow: #df8e1d;
-$teal: #179299;
-$sky: #04a5e5;
+html {
+    height: 100%;
+}
 
 body {
     font-family: 'Open Sans';
+    height: 100%;
+}
+
+textarea {
+    border: none;
+}
+
+footer {
+    background-color: #efefef;
 }
 
 #root {
-    margin: 0;
-    background-color: $crust; 
+    background-color: #efefef;
+    min-height: 100%;
 }
 
 #app, #editor, #preview {
@@ -24,53 +28,57 @@ body {
 }
 
 #editor, #preview {
-  background-color: $base;
   padding: 8px;
+  background-color: white;
 }
 
-h1 {
-    color: $mauve;
+#editor {
+    height: 400px;
 }
 
-h2 {
-    color: $teal;
+#preview {
+    max-height: 80vh;
 }
 
-h3 {
-    color: $sky;
+h1, h2, h3 {
+    font-variant-caps: small-caps;
 }
 
 .toolbar {
-    background-color: $teal;
-    color: white;
-    height: 30px;
-    width: 100%;
-    padding: 4px;
-    font-weight: bold;
+    height: 35px;
+    font-variant-caps: small-caps;
+    background-color: dimgrey;
+    color: snow;
+}
+
+#preview > * {
+    margin-bottom: 1em;
 }
 
 #preview > pre {
-  background-color: white;
   font: monospace;
-  //padding: 5px !important;
 }
 
 #preview > table, th, td {
     padding: 8px;
     border: 1px solid black;
+    text-align: center;
 }
 
 blockquote {
     display: inline-block;
     padding: 4px;
-    background-color: $crust;
 }
 
 th {
-    background-color: $yellow;
-    color: $base;
+    background-color: dimgrey;
+    color: snow;
 }
 
 img {
     max-width: 500px;
+}
+
+a {
+    color: plum;
 }
